@@ -1,322 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Gelix Santizas — Content Writer, Copywriter and Sales Production Writer. Explore writing samples, campaign concepts and professional experience.">
-  <meta name="theme-color" content="#070b16">
-  <title>Gelix Santizas | Content Writer & Copywriter</title>
-  <style>
-    :root {
-      --bg:#070b16; --panel:#0d1425; --panel2:#101b31; --text:#edf5ff;
-      --muted:#9aabc4; --blue:#42b7ff; --cyan:#69e4ff; --line:rgba(112,183,255,.18);
-      --glow:0 0 28px rgba(48,164,255,.18); --radius:20px; --max:1160px;
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth;scroll-padding-top:90px}
-    body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(17,91,155,.18),transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
-    a{color:inherit;text-decoration:none}
-    button{font:inherit}
-    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .nav-wrap{position:sticky;top:0;z-index:20;background:rgba(7,11,22,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .brand{font-weight:800;letter-spacing:.04em}.brand span{color:var(--blue)}
-    .nav-links{display:flex;gap:25px;align-items:center;color:var(--muted);font-size:.9rem}
-    .nav-links a:hover,.nav-links a.active{color:var(--cyan)}
-    .menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px}
-    .eyebrow{color:var(--cyan);font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
-    .hero{min-height:660px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px;padding:90px 0 80px;position:relative}
-    .hero:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:4%;top:16%;background:rgba(0,145,255,.12);filter:blur(85px);pointer-events:none}
-    h1{font-size:clamp(3rem,7vw,5.7rem);line-height:1.02;letter-spacing:-.065em;margin:18px 0 24px}
-    h1 .accent{color:var(--blue);text-shadow:0 0 35px rgba(66,183,255,.28)}
-    .hero-copy{max-width:650px;color:#b6c5db;font-size:1.12rem}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:12px;border:1px solid var(--line);font-weight:750;transition:.2s;cursor:pointer}
-    .btn.primary{background:linear-gradient(110deg,#168ee8,#35c5ff);color:#03101d;border:0;box-shadow:0 8px 30px rgba(25,153,239,.22)}
-    .btn:hover{transform:translateY(-3px);box-shadow:var(--glow)}
-    .hero-card{position:relative;background:linear-gradient(145deg,rgba(20,39,67,.92),rgba(10,17,31,.92));border:1px solid rgba(89,184,255,.3);border-radius:28px;padding:30px;box-shadow:var(--glow);overflow:hidden}
-    .hero-card:after{content:"";position:absolute;width:220px;height:220px;right:-90px;top:-90px;border-radius:50%;border:1px solid rgba(85,192,255,.35);box-shadow:0 0 0 22px rgba(85,192,255,.035),0 0 0 46px rgba(85,192,255,.025)}
-    .monogram{width:84px;height:84px;border-radius:23px;display:grid;place-items:center;font-size:2rem;font-weight:900;color:#04111d;background:linear-gradient(135deg,var(--cyan),#168ee8);box-shadow:0 0 32px rgba(66,183,255,.3);margin-bottom:25px}
-    .hero-card h2{font-size:1.55rem;margin:0 0 7px}.hero-card p{color:var(--muted);margin:0}
-    .quick-facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
-    .fact{background:rgba(5,12,24,.55);border:1px solid var(--line);border-radius:14px;padding:14px}
-    .fact strong{display:block;color:var(--cyan);font-size:1.2rem}.fact span{color:var(--muted);font-size:.8rem}
-    section{padding:88px 0;border-top:1px solid rgba(112,183,255,.09)}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:34px}
-    h2.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0 0}
-    .section-intro{max-width:570px;color:var(--muted);margin:0}
-    .about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
-    .panel{background:linear-gradient(145deg,rgba(15,27,47,.95),rgba(10,17,31,.95));border:1px solid var(--line);border-radius:var(--radius);padding:27px}
-    .panel p{color:#b7c6da}.panel p:last-child{margin-bottom:0}
-    .tag-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
-    .tag{font-size:.82rem;color:#cceaff;border:1px solid rgba(66,183,255,.25);background:rgba(39,143,211,.09);padding:7px 11px;border-radius:999px}
-    .skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .skill{padding:19px;border-radius:15px;background:var(--panel);border:1px solid var(--line);color:#dceaff}
-    .skill small{display:block;color:var(--muted);margin-top:5px}
-    .filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
-    .filter{border:1px solid var(--line);color:var(--muted);background:transparent;border-radius:999px;padding:8px 14px;cursor:pointer}
-    .filter.selected,.filter:hover{background:rgba(46,165,239,.16);border-color:var(--blue);color:var(--cyan)}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
-    .project{background:linear-gradient(145deg,#101c31,#0a1221);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.25s}
-    .project:hover{transform:translateY(-5px);border-color:rgba(66,183,255,.55);box-shadow:var(--glow)}
-    .project-top{height:8px;background:linear-gradient(90deg,#168ee8,#69e4ff)}
-    .project-body{padding:23px}
-    .project-meta{display:flex;justify-content:space-between;gap:10px;color:var(--cyan);font-size:.76rem;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
-    .project h3{font-size:1.25rem;margin:12px 0 8px}
-    .project p{color:var(--muted);font-size:.93rem}
-    .headline{font-size:1.08rem!important;color:#e9f6ff!important;font-weight:800;line-height:1.35}
-    .cta-line{color:var(--cyan)!important;font-size:.82rem;font-weight:800;letter-spacing:.06em}
-    .project-actions{display:flex;gap:10px;margin-top:17px}
-    .text-btn{background:none;border:0;padding:0;color:var(--cyan);font-weight:800;cursor:pointer}
-    .workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-    .step{padding:19px;background:var(--panel);border:1px solid var(--line);border-radius:15px}
-    .step b{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:rgba(66,183,255,.15);color:var(--cyan);margin-bottom:12px}
-    .step h3{font-size:.98rem;margin:0 0 7px}.step p{font-size:.82rem;color:var(--muted);margin:0}
-    .timeline{border-left:1px solid rgba(66,183,255,.4);margin-left:8px;padding-left:27px;display:grid;gap:20px}
-    .role{position:relative;padding:20px 22px;background:var(--panel);border:1px solid var(--line);border-radius:15px}
-    .role:before{content:"";position:absolute;left:-34px;top:25px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}
-    .role h3{margin:0 0 4px}.role .muted{color:var(--cyan);font-size:.85rem}.role p{margin:9px 0 0;color:var(--muted);font-size:.92rem}
-    .tools{display:flex;flex-wrap:wrap;gap:12px}.tool{padding:13px 17px;border:1px solid var(--line);border-radius:13px;background:var(--panel);color:#d9eaff}
-    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center;background:linear-gradient(120deg,rgba(16,53,87,.7),rgba(12,20,36,.95));border:1px solid rgba(66,183,255,.28);border-radius:24px;padding:35px}
-    .contact-box p{color:var(--muted)}
-    .contact-form{display:grid;gap:11px}
-    .contact-form input,.contact-form textarea{width:100%;padding:13px 14px;border:1px solid var(--line);background:#07101e;color:var(--text);border-radius:10px;font:inherit}
-    .contact-form textarea{min-height:110px;resize:vertical}
-    .notice{font-size:.78rem;color:var(--muted)}
-    footer{padding:30px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
-    .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    .modal{position:fixed;inset:0;z-index:50;background:rgba(1,5,12,.82);display:none;place-items:center;padding:20px}
-    .modal.open{display:grid}
-    .modal-card{width:min(700px,100%);max-height:85vh;overflow:auto;background:#0d1729;border:1px solid rgba(66,183,255,.35);border-radius:20px;padding:28px;box-shadow:0 20px 80px #000}
-    .modal-head{display:flex;justify-content:space-between;gap:15px;align-items:start}
-    .close{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:9px;padding:7px 11px;cursor:pointer}
-    .modal-card p{color:#b8c8dc}.modal-card h3{color:var(--cyan)}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s,transform .65s}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding:75px 0}.hero-card{max-width:560px}.skills-grid{grid-template-columns:repeat(2,1fr)}.workflow{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-box{grid-template-columns:1fr}}
-    @media(max-width:620px){.container{width:min(100% - 28px,var(--max))}nav{height:66px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:18px 22px;background:#091222;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.hero{padding:60px 0}.hero-card{padding:23px}section{padding:65px 0}.section-head{display:block}.section-intro{margin-top:12px}.projects{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.contact-box{padding:23px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*,*:before,*:after{transition:none!important;animation:none!important}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Gelix Santizas is a content writer and copywriter creating clear, engaging content, SEO blog concepts, promotional copy, and business communications.">
+<meta name="theme-color" content="#070b16">
+<title>Gelix Santizas | Content Writer | Medical VA | Admin Support | ESL Teacher</title>
+<style>
+:root{--bg:#070b16;--panel:#0d1425;--panel2:#101b31;--text:#edf5ff;--muted:#9aabc4;--blue:#42b7ff;--cyan:#69e4ff;--line:rgba(112,183,255,.18);--glow:0 0 28px rgba(48,164,255,.18);--radius:20px;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:radial-gradient(ellipse at 75% 0%,rgba(17,91,155,.18),transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(var(--max),calc(100% - 40px));margin:auto}.nav-wrap{position:sticky;top:0;z-index:20;background:rgba(7,11,22,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:900;letter-spacing:.05em}.brand span{color:var(--blue)}.nav-links{display:flex;gap:23px;align-items:center;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:var(--cyan)}.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px}.eyebrow{color:var(--cyan);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:850}.hero{min-height:650px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:55px;padding:82px 0;position:relative}.hero:before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;right:4%;top:16%;background:rgba(0,145,255,.12);filter:blur(85px);pointer-events:none}h1{font-size:clamp(3rem,6.8vw,5.5rem);line-height:1.02;letter-spacing:-.065em;margin:18px 0 24px}h1 .accent{color:var(--blue);text-shadow:0 0 35px rgba(66,183,255,.28)}.hero-copy{max-width:660px;color:#b6c5db;font-size:1.1rem}.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:780;transition:.2s;cursor:pointer}.btn.primary{background:linear-gradient(110deg,#168ee8,#35c5ff);color:#03101d;border:0;box-shadow:0 8px 30px rgba(25,153,239,.22)}.btn:hover{transform:translateY(-3px);box-shadow:var(--glow)}.hero-card{position:relative;background:linear-gradient(145deg,rgba(20,39,67,.94),rgba(10,17,31,.94));border:1px solid rgba(89,184,255,.3);border-radius:28px;padding:28px;box-shadow:var(--glow);overflow:hidden}.profile-row{display:flex;align-items:center;gap:18px;margin-bottom:20px}.profile-photo{width:112px;height:112px;object-fit:cover;object-position:center 35%;border-radius:24px;border:2px solid rgba(105,228,255,.65);box-shadow:0 0 28px rgba(66,183,255,.22)}.hero-card h2{font-size:1.5rem;margin:0 0 4px}.hero-card p{color:var(--muted);margin:0}.quick-facts{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:23px}.fact{background:rgba(5,12,24,.55);border:1px solid var(--line);border-radius:14px;padding:13px}.fact strong{display:block;color:var(--cyan);font-size:1.15rem}.fact span{color:var(--muted);font-size:.78rem}section{padding:82px 0;border-top:1px solid rgba(112,183,255,.09)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}h2.section-title{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.045em;margin:8px 0 0}.section-intro{max-width:580px;color:var(--muted);margin:0}.panel{background:linear-gradient(145deg,rgba(15,27,47,.95),rgba(10,17,31,.95));border:1px solid var(--line);border-radius:var(--radius);padding:26px}.panel p{color:#b7c6da}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}.tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.tag{font-size:.8rem;color:#cceaff;border:1px solid rgba(66,183,255,.25);background:rgba(39,143,211,.09);padding:6px 10px;border-radius:999px}.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.skill{padding:18px;border-radius:15px;background:var(--panel);border:1px solid var(--line);color:#dceaff}.skill small{display:block;color:var(--muted);margin-top:5px}.filters{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);color:var(--muted);background:transparent;border-radius:999px;padding:8px 13px;cursor:pointer}.filter.selected,.filter:hover{background:rgba(46,165,239,.16);border-color:var(--blue);color:var(--cyan)}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{background:linear-gradient(145deg,#101c31,#0a1221);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-4px);border-color:rgba(66,183,255,.55);box-shadow:var(--glow)}.project-top{height:7px;background:linear-gradient(90deg,#168ee8,#69e4ff)}.project-body{padding:22px}.project-meta{display:flex;justify-content:space-between;gap:10px;color:var(--cyan);font-size:.73rem;text-transform:uppercase;letter-spacing:.09em;font-weight:850}.project h3{font-size:1.2rem;margin:11px 0 7px}.project p{color:var(--muted);font-size:.91rem}.headline{font-size:1.04rem!important;color:#e9f6ff!important;font-weight:850;line-height:1.35}.cta-line{color:var(--cyan)!important;font-size:.8rem;font-weight:850;letter-spacing:.05em}.text-btn{background:none;border:0;padding:0;color:var(--cyan);font-weight:850;cursor:pointer}.workflow{display:grid;grid-template-columns:repeat(5,1fr);gap:11px}.step{padding:17px;background:var(--panel);border:1px solid var(--line);border-radius:15px}.step b{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:rgba(66,183,255,.15);color:var(--cyan);margin-bottom:11px}.step h3{font-size:.95rem;margin:0 0 6px}.step p{font-size:.8rem;color:var(--muted);margin:0}.timeline{border-left:1px solid rgba(66,183,255,.4);margin-left:8px;padding-left:26px;display:grid;gap:17px}.role{position:relative;padding:19px 21px;background:var(--panel);border:1px solid var(--line);border-radius:15px}.role:before{content:"";position:absolute;left:-33px;top:24px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}.role h3{margin:0 0 3px}.role .muted{color:var(--cyan);font-size:.83rem}.role p{margin:8px 0 0;color:var(--muted);font-size:.9rem}.tools{display:flex;flex-wrap:wrap;gap:10px}.tool{padding:11px 15px;border:1px solid var(--line);border-radius:13px;background:var(--panel);color:#d9eaff}.contact-box{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:linear-gradient(120deg,rgba(16,53,87,.7),rgba(12,20,36,.95));border:1px solid rgba(66,183,255,.28);border-radius:24px;padding:32px}.contact-box p{color:var(--muted)}.contact-email{color:var(--cyan);font-weight:800;overflow-wrap:anywhere}.contact-form{display:grid;gap:10px}.contact-form input,.contact-form textarea{width:100%;padding:12px 14px;border:1px solid var(--line);background:#07101e;color:var(--text);border-radius:10px;font:inherit}.contact-form textarea{min-height:105px;resize:vertical}.notice{font-size:.77rem;color:var(--muted)}footer{padding:28px 0;color:var(--muted);font-size:.83rem;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.modal{position:fixed;inset:0;z-index:50;background:rgba(1,5,12,.84);display:none;place-items:center;padding:18px}.modal.open{display:grid}.modal-card{width:min(720px,100%);max-height:86vh;overflow:auto;background:#0d1729;border:1px solid rgba(66,183,255,.35);border-radius:20px;padding:26px;box-shadow:0 20px 80px #000}.modal-head{display:flex;justify-content:space-between;gap:15px;align-items:start}.close{border:1px solid var(--line);background:transparent;color:var(--text);border-radius:9px;padding:7px 11px;cursor:pointer}.modal-card p{color:#b8c8dc;white-space:pre-line}.modal-card h3{color:var(--cyan)}.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:850px){.hero{grid-template-columns:1fr;min-height:auto;padding:65px 0}.hero-card{max-width:600px}.skills-grid{grid-template-columns:repeat(2,1fr)}.workflow{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-box{grid-template-columns:1fr}}
+@media(max-width:620px){.container{width:min(100% - 28px,var(--max))}nav{height:66px}.menu-btn{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;padding:17px 22px;background:#091222;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.hero{padding:55px 0}.hero-card{padding:21px}.profile-photo{width:92px;height:92px}.profile-row{align-items:flex-start}section{padding:63px 0}.section-head{display:block}.section-intro{margin-top:11px}.projects{grid-template-columns:1fr}.workflow{grid-template-columns:1fr}.skills-grid{grid-template-columns:1fr 1fr}.contact-box{padding:21px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}*,*:before,*:after{transition:none!important}}
+</style>
 </head>
 <body>
-  <div class="nav-wrap">
-    <nav class="container">
-      <a class="brand" href="#home">GELIX<span>.</span></a>
-      <button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Portfolio</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </div>
-
-  <main>
-    <header class="container hero" id="home">
-      <div class="reveal">
-        <div class="eyebrow">Content Writer · Copywriter · Sales Production Writer</div>
-        <h1>Words that <span class="accent">connect.</span><br>Copy that moves.</h1>
-        <p class="hero-copy">Hi, I'm Gelix Santizas. I create clear, engaging content and audience-focused copy that helps businesses communicate their value, build connections, and encourage action.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#work">Explore my work <span>↗</span></a>
-          <a class="btn" href="#contact">Let's connect</a>
-        </div>
-      </div>
-      <aside class="hero-card reveal">
-        <div class="monogram">GS</div>
-        <h2>Gelix Santizas</h2>
-        <p>Writer with a background in customer experience, operations support, coordination, and team leadership.</p>
-        <div class="quick-facts">
-          <div class="fact"><strong>10</strong><span>Advertising concepts</span></div>
-          <div class="fact"><strong>5+</strong><span>Professional work areas</span></div>
-          <div class="fact"><strong>PH</strong><span>Based in the Philippines</span></div>
-          <div class="fact"><strong>Remote</strong><span>Open to opportunities</span></div>
-        </div>
-      </aside>
-    </header>
-
-    <section id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <div><div class="eyebrow">A little about me</div><h2 class="section-title">Writing meets real-world experience.</h2></div>
-          <p class="section-intro">A versatile professional combining communication, organization, and audience awareness.</p>
-        </div>
-        <div class="about-grid">
-          <div class="panel reveal">
-            <p>My professional background spans education, customer support, team leadership, and healthcare-related administrative coordination. These experiences have strengthened my ability to communicate clearly, understand different audiences, manage details, and work toward practical outcomes.</p>
-            <p>As a Content Writer and Copywriter, I bring that same approach to every brief: understand the goal, identify the audience, shape the message, and make every word work.</p>
-            <p>I enjoy developing promotional concepts, social media copy, business communications, process documentation, and content that makes information easier to understand.</p>
-          </div>
-          <div class="panel reveal">
-            <div class="eyebrow">Education</div>
-            <h3>Bachelor of Secondary Education</h3>
-            <p>Major in Technology and Livelihood Education · Graduated 2018, cum laude · Licensed Professional Teacher</p>
-            <div class="eyebrow" style="margin-top:22px">Additional studies</div>
-            <h3>Master of Arts in Education</h3>
-            <p>Completed graduate-level units in English.</p>
-            <div class="tag-list"><span class="tag">Communication</span><span class="tag">Research</span><span class="tag">Editing</span><span class="tag">Audience-focused writing</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <div class="section-head reveal"><div><div class="eyebrow">What I bring</div><h2 class="section-title">Skills & expertise</h2></div><p class="section-intro">A blend of writing, communication, coordination, and operational strengths.</p></div>
-        <div class="skills-grid">
-          <div class="skill reveal">Content Writing<small>Clear, useful, reader-focused content</small></div>
-          <div class="skill reveal">Copywriting<small>Promotional messaging and calls to action</small></div>
-          <div class="skill reveal">Sales Production Writing<small>Headlines, body copy, and production checks</small></div>
-          <div class="skill reveal">Social Media Copy<small>Captions and campaign concepts</small></div>
-          <div class="skill reveal">Business Communication<small>Professional email and written updates</small></div>
-          <div class="skill reveal">Process Documentation<small>Guides, workflows, and knowledge resources</small></div>
-          <div class="skill reveal">Administrative Support<small>Documentation, tracking, and follow-up</small></div>
-          <div class="skill reveal">Team Coordination<small>Coaching, reporting, and workflow support</small></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="work">
-      <div class="container">
-        <div class="section-head reveal"><div><div class="eyebrow">Selected writing samples</div><h2 class="section-title">Portfolio projects</h2></div><p class="section-intro">Ten self-initiated Cebu business advertising concepts, created to demonstrate promotional writing, audience awareness, calls to action, and production judgment.</p></div>
-        <div class="filters reveal" id="filters">
-          <button class="filter selected" data-filter="all">All samples (10)</button>
-          <button class="filter" data-filter="travel">Travel & hospitality</button>
-          <button class="filter" data-filter="food">Food & beverage</button>
-          <button class="filter" data-filter="retail">Retail & lifestyle</button>
-          <button class="filter" data-filter="property">Real estate</button>
-        </div>
-        <div class="projects" id="projectGrid"></div>
-        <p class="notice" style="margin-top:20px">Portfolio disclosure: These are speculative, self-initiated concepts. They are not commissioned, approved, or endorsed by the named businesses. No actual campaign results are claimed. Business details, offers, prices, availability, dates, and claims must be verified before publication.</p>
-      </div>
-    </section>
-
-    <section id="workflow">
-      <div class="container">
-        <div class="section-head reveal"><div><div class="eyebrow">How I work</div><h2 class="section-title">My production workflow</h2></div><p class="section-intro">A practical process for turning a brief into clear, publication-ready copy.</p></div>
-        <div class="workflow">
-          <div class="step reveal"><b>01</b><h3>Confirm the brief</h3><p>Clarify audience, objective, format, size, deadline, and required details.</p></div>
-          <div class="step reveal"><b>02</b><h3>Draft the copy</h3><p>Build a strong headline, concise body copy, and clear call to action.</p></div>
-          <div class="step reveal"><b>03</b><h3>Verify details</h3><p>Check names, contact information, prices, dates, claims, and terms.</p></div>
-          <div class="step reveal"><b>04</b><h3>Edit for layout</h3><p>Keep copy within the assigned space and follow brand guidelines.</p></div>
-          <div class="step reveal"><b>05</b><h3>Proofread</h3><p>Review grammar, spelling, consistency, missing details, and layout.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience">
-      <div class="container">
-        <div class="section-head reveal"><div><div class="eyebrow">Professional background</div><h2 class="section-title">Experience timeline</h2></div><p class="section-intro">Experience across education, customer support, healthcare administration, and team operations.</p></div>
-        <div class="timeline">
-          <article class="role reveal"><h3>Medical Documentation & Referral Coordination</h3><div class="muted">Healthcare administrative support</div><p>Supported medical documentation follow-ups, referral coordination, and authorization submission workflows. Worked with provider offices and documentation processes to help move durable medical equipment orders forward.</p></article>
-          <article class="role reveal"><h3>Team Leader / Workforce Specialist</h3><div class="muted">BPO operations</div><p>Supported team performance, workforce coordination, coaching, attendance monitoring, and operational reporting.</p></article>
-          <article class="role reveal"><h3>Customer Support Specialist</h3><div class="muted">E-commerce and digital platform support</div><p>Handled customer concerns through chat and email support, developing written communication, issue resolution, and customer experience skills.</p></article>
-          <article class="role reveal"><h3>ESL / IELTS Teacher</h3><div class="muted">Education</div><p>Helped learners strengthen English communication skills through instruction, feedback, and structured learning activities.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="tools">
-      <div class="container">
-        <div class="section-head reveal"><div><div class="eyebrow">Working toolkit</div><h2 class="section-title">Tools & platforms</h2></div><p class="section-intro">Tools used across communication, documentation, collaboration, and creative work.</p></div>
-        <div class="tools reveal">
-          <span class="tool">Canva</span><span class="tool">Google Workspace</span><span class="tool">Microsoft Office</span><span class="tool">Salesforce</span><span class="tool">Laserfiche</span><span class="tool">SharePoint</span><span class="tool">Venu</span><span class="tool">Action Center</span><span class="tool">eSign</span>
-        </div>
-        <p class="notice" style="margin-top:15px">Tool list reflects platforms and tools included in my professional background. Specific proficiency may vary by workflow.</p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="contact-box reveal">
-          <div><div class="eyebrow">Have a project in mind?</div><h2 class="section-title">Let's create something meaningful.</h2><p>I'm interested in remote opportunities in content writing, copywriting, sales production writing, and related communication roles.</p><p class="notice">Before publishing, replace the email address in the website settings below with your preferred professional email.</p></div>
-          <form class="contact-form" id="contactForm">
-            <input id="senderName" required placeholder="Your name" aria-label="Your name">
-            <input id="senderEmail" type="email" required placeholder="Your email" aria-label="Your email">
-            <textarea id="senderMessage" required placeholder="Tell me about the opportunity or project..." aria-label="Your message"></textarea>
-            <button class="btn primary" type="submit">Prepare an email ↗</button>
-            <span class="notice" id="formNote">This opens your email app with a pre-filled message. No information is stored by this website.</span>
-          </form>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="container footer-inner"><span>© <span id="year"></span> Gelix Santizas. All rights reserved.</span><span>Designed with clarity, creativity & a little electric blue.</span><a href="#home">Back to top ↑</a></div></footer>
-
-  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <div class="modal-card">
-      <div class="modal-head"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2></div><button class="close" id="closeModal" aria-label="Close">✕</button></div>
-      <h3 id="modalObjective"></h3><p id="modalFormat"></p><p id="modalCopy"></p><h3>Call to action</h3><p id="modalCta"></p><h3>Production notes</h3><p id="modalNotes"></p>
-    </div>
-  </div>
-
-  <script>
-    // Update this address before publishing. The contact form uses the visitor's email app.
-    const CONTACT_EMAIL = "YOUR-PROFESSIONAL-EMAIL@example.com";
-
-    const samples = [
-      {n:"01",brand:"Cebu Pacific",category:"travel",label:"Travel campaign",format:"Digital display ad / social media",objective:"Encourage travelers to explore flight options.",headline:"YOUR NEXT ADVENTURE STARTS HERE",copy:"Make room for new places, new flavors, and stories worth sharing. From a quick getaway to a long-awaited vacation, every journey begins with a plan. Explore destinations, compare your options, and get ready to turn your next travel idea into a real itinerary.",cta:"EXPLORE FLIGHTS",notes:"Use approved route and fare information only. Confirm dates, baggage rules, fees, and offer terms before publication. Never imply availability unless verified."},
-      {n:"02",brand:"Bo's Coffee",category:"food",label:"Coffee moment",format:"Social media caption",objective:"Build brand affinity and encourage café visits.",headline:"A LITTLE PAUSE. A LOT TO LOOK FORWARD TO.",copy:"Between busy mornings and long to-do lists, take a moment for yourself. Catch up with a friend, settle into your favorite corner, or simply enjoy a coffee break before the day moves on. Sometimes, a good day starts with a small pause.",cta:"MAKE TIME FOR YOUR COFFEE MOMENT.",notes:"Adapt to the branch and campaign. Confirm menu items, prices, and promotions before use."},
-      {n:"03",brand:"Ayala Center Cebu",category:"retail",label:"Shopping & lifestyle",format:"Mall campaign / digital banner",objective:"Invite shoppers to plan a visit.",headline:"MAKE A DAY OF IT",copy:"Your next find, favorite meal, and catch-up could all happen in one place. Meet your friends, discover something new, and enjoy a change of scene. Whether you're browsing the latest finds, taking a break over a meal, or making time for weekend fun, make your next mall visit your own.",cta:"PLAN YOUR VISIT",notes:"Verify tenant participation, event schedules, opening hours, parking details, and campaign-specific claims."},
-      {n:"04",brand:"SM Seaside City Cebu",category:"retail",label:"Weekend promotion",format:"Promotional poster / social post",objective:"Promote a weekend outing.",headline:"WEEKENDS ARE BETTER SHARED",copy:"Bring your people. Make new memories. A family day, a catch-up with friends, or a little time for yourself—make space for moments that brighten your week. Explore shops, enjoy a meal, and find your own reason to make the weekend count.",cta:"SEE YOU THIS WEEKEND",notes:"Do not imply specific events or attractions are available without checking the current mall calendar. Use approved brand assets."},
-      {n:"05",brand:"Goldilocks",category:"food",label:"Celebration",format:"Product promotion / social media",objective:"Connect celebration products with family milestones.",headline:"MAKE THE MOMENT A LITTLE SWEETER",copy:"Celebrate the milestones, big and small. Birthdays, family reunions, and simple get-togethers all deserve a moment worth remembering. Bring everyone together, share a favorite treat, and make room for another story you'll be smiling about long after the celebration ends.",cta:"EXPLORE CELEBRATION TREATS",notes:"Confirm products, ordering lead times, branch details, delivery options, prices, and seasonal offers before publishing."},
-      {n:"06",brand:"CNT Leisure",category:"travel",label:"Cebu getaway",format:"Hospitality advertisement",objective:"Encourage prospective guests to inquire about a stay.",headline:"STEP AWAY FROM THE ROUTINE",copy:"Make time for a change of pace. Sometimes, the best plan is to slow down. Whether you're arranging a short break or planning a special escape, start with the details that matter to you—your dates, your travel companions, and the kind of experience you want to remember.",cta:"EXPLORE YOUR STAY OPTIONS",notes:"Confirm the specific property, room types, amenities, rates, availability, and booking terms. No current package is implied."},
-      {n:"07",brand:"Local Food Market",category:"food",label:"Fictional event concept",format:"Community event promotion",objective:"Promote a local food-market experience.",headline:"COME HUNGRY. LEAVE WITH A NEW FAVORITE.",copy:"Discover local flavors and meet the people behind them. From savory bites to sweet finds, a food market is a chance to explore one stall at a time. Bring your friends, follow your cravings, and support local makers and food entrepreneurs who add flavor to the community.",cta:"CHECK THE MARKET SCHEDULE",notes:"Fictional campaign concept. Confirm organizer, venue, date, vendor list, and permits before use."},
-      {n:"08",brand:"Sugbo Mercado",category:"food",label:"Food market",format:"Social media / event promo",objective:"Encourage people to visit a food-market gathering.",headline:"YOUR NEXT FOOD TRIP IS CLOSER THAN YOU THINK",copy:"Bring your appetite and your favorite people. Make room for a night of exploring different flavors, discovering new favorites, and spending time with friends. Wander from stall to stall, try something you haven't had before, and let your cravings lead the way.",cta:"CHECK THE LATEST LOCATION AND SCHEDULE",notes:"Verify current operating status, venue, schedule, vendors, and event details. Do not imply all locations operate daily."},
-      {n:"09",brand:"The Outlets at Pueblo Verde",category:"retail",label:"Retail destination",format:"Retail / destination ad",objective:"Encourage a shopping trip and discovery of offers.",headline:"DISCOVER YOUR NEXT GREAT FIND",copy:"A little browsing can lead to something you love. Set aside time to explore, compare styles, and find pieces that fit your everyday life. Make a shopping trip out of it and check the latest store offers before you head over.",cta:"PLAN YOUR SHOPPING TRIP",notes:"Never promise discounts or savings without confirmed participating stores, prices, dates, exclusions, and terms."},
-      {n:"10",brand:"Cebu Landmasters",category:"property",label:"Property lead generation",format:"Real estate lead-generation ad",objective:"Invite prospective buyers to inquire about property options.",headline:"TAKE THE NEXT STEP TOWARD YOUR OWN SPACE",copy:"Explore property options for the life you're building. Every next chapter starts with questions: what fits your plans, what location works for you, and what details should you consider? Start with a conversation and explore available property information to help you make a more informed decision.",cta:"INQUIRE FOR VERIFIED PROPERTY DETAILS",notes:"Confirm project, location, price range, inventory, fees, timelines, and legal disclosures. Avoid guaranteed appreciation or investment-return claims."}
-    ];
-
-    const grid = document.getElementById("projectGrid");
-    function renderProjects(filter="all"){
-      grid.innerHTML = "";
-      samples.filter(s=>filter==="all"||s.category===filter).forEach(s=>{
-        const card=document.createElement("article"); card.className="project reveal";
-        card.innerHTML=`<div class="project-top"></div><div class="project-body"><div class="project-meta"><span>${s.n} / ${s.label}</span><span>Concept</span></div><h3>${s.brand}</h3><p class="headline">${s.headline}</p><p>${s.objective}</p><div class="project-actions"><button class="text-btn" data-sample="${s.n}">View writing sample ↗</button></div></div>`;
-        grid.appendChild(card);
-      });
-      observeReveals();
-    }
-    function openSample(n){
-      const s=samples.find(x=>x.n===n); if(!s)return;
-      document.getElementById("modalMeta").textContent=`${s.n} · ${s.label}`;
-      document.getElementById("modalTitle").textContent=s.brand;
-      document.getElementById("modalObjective").textContent=s.objective;
-      document.getElementById("modalFormat").textContent=`Format: ${s.format}`;
-      document.getElementById("modalCopy").textContent=`${s.headline}\n\n${s.copy}`;
-      document.getElementById("modalCta").textContent=s.cta;
-      document.getElementById("modalNotes").textContent=s.notes;
-      document.getElementById("projectModal").classList.add("open");
-      document.body.style.overflow="hidden";
-    }
-    grid.addEventListener("click",e=>{const b=e.target.closest("[data-sample]");if(b)openSample(b.dataset.sample)});
-    document.getElementById("closeModal").addEventListener("click",closeModal);
-    document.getElementById("projectModal").addEventListener("click",e=>{if(e.target.id==="projectModal")closeModal()});
-    document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
-    function closeModal(){document.getElementById("projectModal").classList.remove("open");document.body.style.overflow=""}
-    document.getElementById("filters").addEventListener("click",e=>{
-      const b=e.target.closest("[data-filter]");if(!b)return;
-      document.querySelectorAll(".filter").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");renderProjects(b.dataset.filter);
-    });
-    document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));
-    document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
-    document.getElementById("contactForm").addEventListener("submit",e=>{
-      e.preventDefault();
-      if(CONTACT_EMAIL.includes("YOUR-PROFESSIONAL-EMAIL")){document.getElementById("formNote").textContent="Please update CONTACT_EMAIL in the website code before using this form.";return}
-      const name=document.getElementById("senderName").value;
-      const email=document.getElementById("senderEmail").value;
-      const message=document.getElementById("senderMessage").value;
-      const subject=encodeURIComponent("Portfolio inquiry from "+name);
-      const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);
-      window.location.href=`mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    });
-    document.getElementById("year").textContent=new Date().getFullYear();
-    let observer;
-    function observeReveals(){
-      if(!("IntersectionObserver" in window)){document.querySelectorAll(".reveal").forEach(x=>x.classList.add("visible"));return}
-      if(observer)observer.disconnect();
-      observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.08});
-      document.querySelectorAll(".reveal:not(.visible)").forEach(el=>observer.observe(el));
-    }
-    renderProjects(); observeReveals();
-  </script>
-</body>
-</html>
+<div class="nav-wrap"><nav class="container"><a class="brand" href="#home">GELIX<span>.</span></a><button class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button><div class="nav-links" id="navLinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Portfolio</a><a href="#seo">SEO Writing</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></nav></div>
+<main>
+<header class="container hero" id="home">
+<div class="reveal"><div class="eyebrow">Content Writer · Medical VA · Admin Support · ESL Teacher</div><h1>Words that <span class="accent">connect.</span><br>Copy that moves.</h1><p class="hero-copy">Hi, I'm Gelix Santizas. I create clear, engaging content and audience-focused copy that helps businesses communicate their value, build connections, and encourage action.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore my work ↗</a><a class="btn" href="#contact">Let's connect</a><a class="btn" href="Gelix_Santizas_Resume.pdf" download>Download resume ↓</a></div></div>
+<aside class="hero-card reveal"><div class="profile-row"><img class="profile-photo" src="gelix-profile.png" alt="Professional portrait of Gelix Santizas"><div><h2>Gelix Santizas</h2><p>Content Writer · Medical VA · Admin Support · ESL Teacher</p></div></div><p>Writer and operations professional with experience in customer communication, healthcare documentation coordination, workforce support, and English instruction.</p><div class="quick-facts"><div class="fact"><strong>10</strong><span>Cebu advertising concepts</span></div><div class="fact"><strong>SEO</strong><span>Blog & content samples</span></div><div class="fact"><strong>PH</strong><span>Based in the Philippines</span></div><div class="fact"><strong>Remote</strong><span>Open to opportunities</span></div></div></aside>
+</header>
+<section id="about"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">A little about me</div><h2 class="section-title">Writing meets real-world experience.</h2></div><p class="section-intro">A versatile professional combining communication, organization, and audience awareness.</p></div><div class="about-grid"><div class="panel reveal"><p>My professional background spans education, customer support, team operations, and healthcare-related administrative coordination. These experiences have strengthened my ability to communicate clearly, understand different audiences, manage details, and work toward practical outcomes.</p><p>As a Content Writer and Copywriter, I bring that same approach to every brief: understand the goal, identify the audience, shape the message, and make every word work.</p><p>I enjoy developing promotional concepts, social media copy, blog content, business communications, process documentation, and content that makes information easier to understand.</p></div><div class="panel reveal"><div class="eyebrow">Education</div><h3>Bachelor of Secondary Education</h3><p>Major in Technology & Livelihood Education · Samar State University · March 2018</p><p>Licensed Professional Teacher · Philippines</p><div class="eyebrow" style="margin-top:18px">Graduate studies</div><h3>Master of Arts in Education</h3><p>Major in English · Completed graduate-level units; degree not completed.</p><div class="tag-list"><span class="tag">Communication</span><span class="tag">Research</span><span class="tag">Editing</span><span class="tag">Audience-focused writing</span></div></div></div></div></section>
+<section id="skills"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">What I bring</div><h2 class="section-title">Skills & expertise</h2></div><p class="section-intro">A blend of writing, communication, coordination, and operational strengths.</p></div><div class="skills-grid"><div class="skill reveal">Content Writing<small>Clear, useful, reader-focused content</small></div><div class="skill reveal">Copywriting<small>Promotional messaging and calls to action</small></div><div class="skill reveal">SEO Content Concepts<small>Search intent, structure, and metadata</small></div><div class="skill reveal">Sales Production Writing<small>Headlines, body copy, and production checks</small></div><div class="skill reveal">Social Media Copy<small>Captions and campaign concepts</small></div><div class="skill reveal">Business Communication<small>Professional email and written updates</small></div><div class="skill reveal">Process Documentation<small>Guides, workflows, and knowledge resources</small></div><div class="skill reveal">Administrative Support<small>Documentation, tracking, and follow-up</small></div></div></div></section>
+<section id="work"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Selected writing samples</div><h2 class="section-title">Advertising & copywriting</h2></div><p class="section-intro">Ten self-initiated Cebu business advertising concepts demonstrating promotional writing, audience awareness, calls to action, and production judgment.</p></div><div class="filters reveal" id="filters"><button class="filter selected" data-filter="all">All samples (10)</button><button class="filter" data-filter="travel">Travel & hospitality</button><button class="filter" data-filter="food">Food & beverage</button><button class="filter" data-filter="retail">Retail & lifestyle</button><button class="filter" data-filter="property">Real estate</button></div><div class="projects" id="projectGrid"></div><p class="notice" style="margin-top:18px">Disclosure: These are speculative, self-initiated concepts. They are not commissioned, approved, or endorsed by the named businesses. No campaign results are claimed. Verify all business details, offers, availability, dates, prices, and claims before publication.</p></div></section>
+<section id="seo"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Search-focused content</div><h2 class="section-title">SEO & blog writing samples</h2></div><p class="section-intro">Conceptual writing exercises showing how I approach search intent, useful structure, readable copy, and on-page SEO elements.</p></div><div class="projects" id="seoGrid"></div><p class="notice" style="margin-top:18px">SEO samples are original portfolio demonstrations. Keyword phrases are illustrative examples; no search-volume, ranking, traffic, or performance data is claimed.</p></div></section>
+<section id="workflow"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">How I work</div><h2 class="section-title">My writing workflow</h2></div><p class="section-intro">A practical process for turning a brief into clear, publication-ready content.</p></div><div class="workflow"><div class="step reveal"><b>01</b><h3>Understand the brief</h3><p>Clarify audience, objective, format, deadline, and required details.</p></div><div class="step reveal"><b>02</b><h3>Research & outline</h3><p>Identify the topic, audience questions, and logical content structure.</p></div><div class="step reveal"><b>03</b><h3>Draft the copy</h3><p>Write useful content with a clear message and appropriate tone.</p></div><div class="step reveal"><b>04</b><h3>Optimize & edit</h3><p>Refine headings, metadata, readability, and layout fit.</p></div><div class="step reveal"><b>05</b><h3>Proofread</h3><p>Review accuracy, grammar, consistency, and missing information.</p></div></div></div></section>
+<section id="experience"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Professional background</div><h2 class="section-title">Experience timeline</h2></div><p class="section-intro">Experience across healthcare administration, customer support, workforce operations, and education.</p></div><div class="timeline">
+<article class="role reveal"><h3>Medical Documentation Coordinator / Funding Coordinator</h3><div class="muted">Tasks Everyday — Numotion Account · March 2023 – October 23, 2026</div><p>Coordinated with physician offices and clinics to obtain documentation required for durable medical equipment orders and related coverage workflows. Followed up on medical records, physician orders, letters of medical necessity, referrals, and other documents; maintained order notes and operational trackers; and contributed to process documentation and reporting.</p></article>
+<article class="role reveal"><h3>Adviser 1 — Customer Support</h3><div class="muted">Concentrix — YouTube Account · July 2021 – March 2023</div><p>Provided customer support through chat and email, assisted with account concerns and platform troubleshooting, documented interactions, and escalated cases requiring additional review.</p></article>
+<article class="role reveal"><h3>Workforce Specialist</h3><div class="muted">ePerformax — Shopee Account · February 2020 – July 2021</div><p>Supported workforce operations by monitoring real-time performance, attendance, and schedule adherence; tracked operational metrics and coordinated staffing adjustments.</p></article>
+<article class="role reveal"><h3>IELTS Teacher</h3><div class="muted">Cebu Globalization · June 2018 – February 2020</div><p>Delivered IELTS preparation lessons, developed learning materials, provided individualized feedback, and helped learners strengthen English communication and test-taking skills.</p></article>
+</div></div></section>
+<section id="tools"><div class="container"><div class="section-head reveal"><div><div class="eyebrow">Working toolkit</div><h2 class="section-title">Tools & platforms</h2></div><p class="section-intro">Tools and systems included in my professional background.</p></div><div class="tools reveal"><span class="tool">Google Workspace</span><span class="tool">Microsoft Office</span><span class="tool">Canva</span><span class="tool">Salesforce</span><span class="tool">Laserfiche</span><span class="tool">SharePoint</span><span class="tool">Venu</span><span class="tool">Action Center</span><span class="tool">eSign</span><span class="tool">Digital trackers & reporting tools</span></div><p class="notice" style="margin-top:14px">Tool list reflects platforms and tools included in my professional background. Specific proficiency may vary by workflow.</p></div></section>
+<section id="contact"><div class="container"><div class="contact-box reveal"><div><div class="eyebrow">Have a project in mind?</div><h2 class="section-title">Let's create something meaningful.</h2><p>I'm interested in remote opportunities in content writing, medical virtual assistance, administrative support, and English language teaching.</p><p>Professional email<br><a class="contact-email" href="mailto:gsantizas26@gmail.com">gsantizas26@gmail.com</a></p><p><a class="contact-email" href="https://www.linkedin.com/in/gelixsantizas/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></p><a class="btn" href="Gelix_Santizas_Resume.pdf" download>Download my resume ↓</a></div><form class="contact-form" id="contactForm"><input id="senderName" required placeholder="Your name" aria-label="Your name"><input id="senderEmail" type="email" required placeholder="Your email" aria-label="Your email"><textarea id="senderMessage" required placeholder="Tell me about the opportunity or project..." aria-label="Your message"></textarea><button class="btn primary" type="submit">Prepare an email ↗</button><span class="notice" id="formNote">Your email app will open with a pre-filled message. This static website does not store submissions.</span></form></div></div></section>
+</main>
+<footer><div class="container footer-inner"><span>© <span id="year"></span> Gelix Santizas. All rights reserved.</span><span>Designed with clarity, creativity & a little electric blue.</span><a href="#home">Back to top ↑</a></div></footer>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><div class="modal-head"><div><div class="eyebrow" id="modalMeta"></div><h2 id="modalTitle"></h2></div><button class="close" id="closeModal" aria-label="Close">✕</button></div><div id="modalContent"></div></div></div>
+<script>
+const email="gsantizas26@gmail.com";
+const adSamples=[
+{n:"01",brand:"Cebu Pacific",cat:"travel",label:"Travel campaign",format:"Digital display ad / social media",objective:"Encourage travelers to explore flight options.",headline:"YOUR NEXT ADVENTURE STARTS HERE",copy:"Make room for new places, new flavors, and stories worth sharing. From a quick getaway to a long-awaited vacation, every journey begins with a plan. Explore destinations, compare your options, and get ready to turn your next travel idea into a real itinerary.",cta:"EXPLORE FLIGHTS",notes:"Use approved route and fare information only. Confirm dates, baggage rules, fees, and offer terms before publication. Never imply availability unless verified."},
+{n:"02",brand:"Bo's Coffee",cat:"food",label:"Coffee moment",format:"Social media caption",objective:"Build brand affinity and encourage café visits.",headline:"A LITTLE PAUSE. A LOT TO LOOK FORWARD TO.",copy:"Between busy mornings and long to-do lists, take a moment for yourself. Catch up with a friend, settle into your favorite corner, or simply enjoy a coffee break before the day moves on. Sometimes, a good day starts with a small pause.",cta:"MAKE TIME FOR YOUR COFFEE MOMENT.",notes:"Adapt to the branch and campaign. Confirm menu items, prices, and promotions before use."},
+{n:"03",brand:"Ayala Center Cebu",cat:"retail",label:"Shopping & lifestyle",format:"Mall campaign / digital banner",objective:"Invite shoppers to plan a visit.",headline:"MAKE A DAY OF IT",copy:"Your next find, favorite meal, and catch-up could all happen in one place. Meet your friends, discover something new, and enjoy a change of scene. Whether you're browsing the latest finds, taking a break over a meal, or making time for weekend fun, make your next mall visit your own.",cta:"PLAN YOUR VISIT",notes:"Verify tenant participation, event schedules, opening hours, parking details, and campaign-specific claims."},
+{n:"04",brand:"SM Seaside City Cebu",cat:"retail",label:"Weekend promotion",format:"Promotional poster / social post",objective:"Promote a weekend outing.",headline:"WEEKENDS ARE BETTER SHARED",copy:"Bring your people. Make new memories. A family day, a catch-up with friends, or a little time for yourself—make space for moments that brighten your week. Explore shops, enjoy a meal, and find your own reason to make the weekend count.",cta:"SEE YOU THIS WEEKEND",notes:"Do not imply specific events or attractions are available without checking the current mall calendar. Use approved brand assets."},
+{n:"05",brand:"Goldilocks",cat:"food",label:"Celebration",format:"Product promotion / social media",objective:"Connect celebration products with family milestones.",headline:"MAKE THE MOMENT A LITTLE SWEETER",copy:"Celebrate the milestones, big and small. Birthdays, family reunions, and simple get-togethers all deserve a moment worth remembering. Bring everyone together, share a favorite treat, and make room for another story you'll be smiling about long after the celebration ends.",cta:"EXPLORE CELEBRATION TREATS",notes:"Confirm products, ordering lead times, branch details, delivery options, prices, and seasonal offers before publishing."},
+{n:"06",brand:"CNT Leisure",cat:"travel",label:"Cebu getaway",format:"Hospitality advertisement",objective:"Encourage prospective guests to inquire about a stay.",headline:"STEP AWAY FROM THE ROUTINE",copy:"Make time for a change of pace. Sometimes, the best plan is to slow down. Whether you're arranging a short break or planning a special escape, start with the details that matter to you—your dates, your travel companions, and the kind of experience you want to remember.",cta:"EXPLORE YOUR STAY OPTIONS",notes:"Confirm the specific property, room types, amenities, rates, availability, and booking terms. No current package is implied."},
+{n:"07",brand:"Local Food Market",cat:"food",label:"Fictional event concept",format:"Community event promotion",objective:"Promote a local food-market experience.",headline:"COME HUNGRY. LEAVE WITH A NEW FAVORITE.",copy:"Discover local flavors and meet the people behind them. From savory bites to sweet finds, a food market is a chance to explore one stall at a time. Bring your friends, follow your cravings, and support local makers and food entrepreneurs who add flavor to the community.",cta:"CHECK THE MARKET SCHEDULE",notes:"Fictional campaign concept. Confirm organizer, venue, date, vendor list, and permits before use."},
+{n:"08",brand:"Sugbo Mercado",cat:"food",label:"Food market",format:"Social media / event promo",objective:"Encourage people to visit a food-market gathering.",headline:"YOUR NEXT FOOD TRIP IS CLOSER THAN YOU THINK",copy:"Bring your appetite and your favorite people. Make room for a night of exploring different flavors, discovering new favorites, and spending time with friends. Wander from stall to stall, try something you haven't had before, and let your cravings lead the way.",cta:"CHECK THE LATEST LOCATION AND SCHEDULE",notes:"Verify current operating status, venue, schedule, vendors, and event details. Do not imply all locations operate daily."},
+{n:"09",brand:"The Outlets at Pueblo Verde",cat:"retail",label:"Retail destination",format:"Retail / destination ad",objective:"Encourage a shopping trip and discovery of offers.",headline:"DISCOVER YOUR NEXT GREAT FIND",copy:"A little browsing can lead to something you love. Set aside time to explore, compare styles, and find pieces that fit your everyday life. Make a shopping trip out of it and check the latest store offers before you head over.",cta:"PLAN YOUR SHOPPING TRIP",notes:"Never promise discounts or savings without confirmed participating stores, prices, dates, exclusions, and terms."},
+{n:"10",brand:"Cebu Landmasters",cat:"property",label:"Property lead generation",format:"Real estate lead-generation ad",objective:"Invite prospective buyers to inquire about property options.",headline:"TAKE THE NEXT STEP TOWARD YOUR OWN SPACE",copy:"Explore property options for the life you're building. Every next chapter starts with questions: what fits your plans, what location works for you, and what details should you consider? Start with a conversation and explore available property information to help you make a more informed decision.",cta:"INQUIRE FOR VERIFIED PROPERTY DETAILS",notes:"Confirm project, location, price range, inventory, fees, timelines, and legal disclosures. Avoid guaranteed appreciation or investment-return claims."}
+];
+const seoSamples=[
+{n:"SEO 01",title:"A Practical Guide to Planning a Weekend in Cebu City",type:"SEO blog article",intent:"Informational",keyword:"weekend itinerary in Cebu City",metaTitle:"Weekend in Cebu City: A Practical Planning Guide",metaDesc:"Plan a smoother Cebu City weekend with tips for choosing activities, grouping nearby stops, preparing for weather, and making time for local food.",excerpt:"A good weekend plan does not need to be packed from morning to night. Start by choosing the kind of day you want—food discovery, culture, shopping, or a slower city break. Then group places by area so you spend less time crossing the city and more time enjoying each stop.",outline:"Suggested structure:\n• Start with your preferred weekend pace\n• Group activities by neighborhood or area\n• Make room for meals and rest breaks\n• Check opening hours, transport, and weather\n• Keep one flexible slot for an unexpected discovery",seoNote:"Primary phrase is used naturally in the title and introduction. Supporting subtopics address practical reader questions. No search-volume or ranking data is claimed."},
+{n:"SEO 02",title:"How to Choose a Coffee Shop for Work, Study, or Catch-Ups",type:"Local lifestyle blog concept",intent:"Informational / commercial investigation",keyword:"coffee shop in Cebu for studying",metaTitle:"Choosing a Cebu Coffee Shop for Work or Catch-Ups",metaDesc:"Compare the details that make a coffee shop suitable for studying, remote work, or meeting friends—from seating and noise to location and menu.",excerpt:"The best coffee shop depends on what you need from the visit. A quiet corner for focused work has different requirements from a relaxed place to meet a friend. Before choosing, consider location, seating, noise level, connectivity, opening hours, and the kind of atmosphere you enjoy.",outline:"Suggested structure:\n• Define the purpose of your visit\n• Consider location and accessibility\n• Look at seating, noise, and comfort\n• Check current hours and available amenities\n• Be considerate of the venue and other guests",seoNote:"The keyword phrase is an illustrative target. The article avoids claiming that any named business offers unverified facilities or amenities."},
+{n:"SEO 03",title:"Writing Product Descriptions That Help Customers Make Decisions",type:"SEO & conversion copywriting guide",intent:"Informational",keyword:"how to write product descriptions",metaTitle:"How to Write Product Descriptions That Convert",metaDesc:"Learn a practical product-description structure that explains benefits, answers customer questions, uses clear language, and supports informed buying decisions.",excerpt:"A useful product description does more than list features. It helps a customer understand what the product is, who it may suit, and which details matter before making a decision. Start with the most relevant benefit, support it with accurate features, and answer likely questions without exaggeration.",outline:"Suggested structure:\n• Lead with the customer-relevant benefit\n• Explain verified features in plain language\n• Include dimensions, materials, compatibility, or care details where relevant\n• Address common questions and limitations\n• End with a clear, accurate next step",seoNote:"This is a writing framework, not a claim of measured conversion improvement. Product specifications must come from an authorized source."},
+{n:"SEO 04",title:"Sample Keyword Map: Cebu Weekend Planning",type:"Keyword research demonstration",intent:"Mixed search intent",keyword:"Cebu weekend itinerary; things to do in Cebu City; Cebu food spots",metaTitle:"Keyword Map — Cebu Weekend Planning",metaDesc:"Illustrative keyword grouping for a Cebu weekend planning content cluster.",excerpt:"This sample groups related search phrases by the likely task behind the query. The aim is to create a useful content structure rather than repeat keywords unnaturally.",outline:"Example topic cluster:\n• Main page: weekend itinerary in Cebu City — planning intent\n• Supporting article: things to do in Cebu City — discovery intent\n• Supporting article: Cebu food spots — local dining discovery\n• Supporting article: Cebu weekend budget tips — planning and comparison\n• Internal links connect the supporting articles to the main guide.",seoNote:"Illustrative keyword map only. No third-party keyword tool, search volume, competition score, or ranking position was used."}
+];
+const grid=document.getElementById("projectGrid");
+function renderAds(filter="all"){grid.innerHTML="";adSamples.filter(s=>filter==="all"||s.cat===filter).forEach(s=>{const el=document.createElement("article");el.className="project reveal";el.innerHTML=`<div class="project-top"></div><div class="project-body"><div class="project-meta"><span>${s.n} / ${s.label}</span><span>Concept</span></div><h3>${s.brand}</h3><p class="headline">${s.headline}</p><p>${s.objective}</p><button class="text-btn" data-ad="${s.n}">View writing sample ↗</button></div>`;grid.appendChild(el)});observe()};
+function renderSeo(){const g=document.getElementById("seoGrid");seoSamples.forEach((s,i)=>{const el=document.createElement("article");el.className="project reveal";el.innerHTML=`<div class="project-top"></div><div class="project-body"><div class="project-meta"><span>${s.n}</span><span>${s.type}</span></div><h3>${s.title}</h3><p class="headline">${s.keyword}</p><p>${s.excerpt}</p><button class="text-btn" data-seo="${i}">View SEO breakdown ↗</button></div>`;g.appendChild(el)});observe()};
+function showModal(meta,title,content){document.getElementById("modalMeta").textContent=meta;document.getElementById("modalTitle").textContent=title;document.getElementById("modalContent").innerHTML=content;document.getElementById("modal").classList.add("open");document.body.style.overflow="hidden"}
+function closeModal(){document.getElementById("modal").classList.remove("open");document.body.style.overflow=""}
+grid.addEventListener("click",e=>{const b=e.target.closest("[data-ad]");if(!b)return;const s=adSamples.find(x=>x.n===b.dataset.ad);showModal(`${s.n} · ${s.label}`,s.brand,`<h3>${s.objective}</h3><p><b>Format:</b> ${s.format}</p><p><b>${s.headline}</b>\n\n${s.copy}</p><h3>Call to action</h3><p>${s.cta}</p><h3>Production notes</h3><p>${s.notes}</p>`)});
+document.getElementById("seoGrid").addEventListener("click",e=>{const b=e.target.closest("[data-seo]");if(!b)return;const s=seoSamples[Number(b.dataset.seo)];showModal(s.n,s.title,`<h3>Search intent</h3><p>${s.intent}</p><h3>Illustrative target keyword</h3><p>${s.keyword}</p><h3>Suggested SEO title</h3><p>${s.metaTitle}</p><h3>Meta description</h3><p>${s.metaDesc}</p><h3>Article excerpt</h3><p>${s.excerpt}</p><h3>Suggested outline</h3><p>${s.outline}</p><h3>SEO notes</h3><p>${s.seoNote}</p>`)});
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;document.querySelectorAll(".filter").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");renderAds(b.dataset.filter)});
+document.getElementById("closeModal").addEventListener("click",closeModal);document.getElementById("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navLinks").classList.toggle("open"));document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navLinks").classList.remove("open")));
+document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();const name=document.getElementById("senderName").value;const from=document.getElementById("senderEmail").value;const message=document.getElementById("senderMessage").value;const subject=encodeURIComponent("Portfolio inquiry from "+name);const body=encodeURIComponent("Name: "+name+"\nEmail: "+from+"\n\n"+message);window.location.href=`mailto:${email}?subject=${subject}&body=${body}`});
+document.getElementById("year").textContent=new Date().getFullYear();let observer;function observe(){if(!("IntersectionObserver"in window)){document.querySelectorAll(".reveal").forEach(x=>x.classList.add("visible"));return}if(observer)observer.disconnect();observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target)}}),{threshold:.07});document.querySelectorAll(".reveal:not(.visible)").forEach(el=>observer.observe(el))}
+renderAds();renderSeo();observe();
+</script>
+</body></html>
