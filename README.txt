@@ -37,3 +37,15 @@ IMPORTANT
 - The SEO and blog examples are original conceptual portfolio samples. Keyword phrases are illustrative; no search-volume, ranking, traffic, or campaign-performance claims are made.
 - The 10 Cebu business advertising samples are retained and disclosed as speculative, self-initiated concepts, not client work or endorsements.
 - The supplied photo is used as provided.
+
+INTERACTIVE ARCADE UPDATE
+- Added an Interactive Arcade section with Neon Snake, 2048, and Word Search.
+- Snake supports keyboard (arrow keys/WASD) and on-screen touch controls.
+- 2048 supports arrow keys and mobile swipe gestures.
+- Word Search supports selecting two endpoints in a straight line, including diagonals.
+- Game scores are stored only in the browser session where supported; no score or personal data is sent to a server.
+- No external game libraries or services are required.
+- The Arcade link is included in the main navigation.
+
+GITHUB PAGES UPDATE
+Upload the updated index.html to the repository root, replacing the previous index.html. Keep gelix-profile.png and Gelix_Santizas_Resume.pdf in the repository root as before. You can upload the complete ZIP only as a backup; GitHub Pages needs the extracted website files, not the ZIP.
